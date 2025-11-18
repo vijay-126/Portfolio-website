@@ -1,0 +1,145 @@
+:root {
+  --main-orange: #ff8f8f;
+  --main-yellow: #f5f5f0;
+  --main-blue: #c2e2fa;
+  --main-purple: #b7a3e3;
+}
+
+#hire {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🌈 Animated gradient background */
+.animated-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, var(--main-purple), var(--main-blue), var(--main-orange), var(--main-yellow));
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* ✨ Soft moving glow overlay */
+.animated-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 25% 30%, rgba(255, 255, 255, 0.2), transparent 60%),
+              radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.15), transparent 60%);
+  animation: glowMove 18s ease-in-out infinite;
+  mix-blend-mode: overlay;
+  opacity: 0.7;
+}
+
+/* 🌊 Keyframes for movement */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowMove {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(4%, -4%); }
+}
+
+/* 💬 Hire Me form box */
+.hire-container {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 25px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1.3s ease-in-out;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Typography */
+.hire-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hire-container p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* 📨 Contact form */
+.hire-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hire-form input,
+.hire-form textarea {
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #333;
+}
+
+.btn-submit {
+  background: var(--main-purple);
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  background: var(--main-blue);
+  color: #333;
+  transform: scale(1.05);
+}
+
+/* 🔗 Extra links */
+.hire-links {
+  margin-top: 1.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.hire-btn {
+  background: white;
+  color: var(--main-purple);
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.hire-btn:hover {
+  background: var(--main-orange);
+  color: #fff;
+  transform: scale(1.05);
+}
