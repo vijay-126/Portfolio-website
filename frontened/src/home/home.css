@@ -187,8 +187,9 @@
   height: 18rem;
   border-radius: 50%;
   object-fit: cover;
+  z-index: 0;
   border: 5px solid var(--main-blue);
-  animation: float 4s ease-in-out infinite;
+  animation: float 4s ease-in-out infinite, float-lr 4s ease-in-out infinite;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
@@ -200,7 +201,14 @@
     transform: translateY(-10px);
   }
 }
-
+@keyframes float {
+  0%,100%{
+    transform:translateX(0) ;
+  }
+  50%{
+    transform: translateX(20rem);
+  }
+}
 .my-image:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }

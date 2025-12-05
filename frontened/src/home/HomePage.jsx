@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import "../utils.css";
 import "./home.css";
 
 export default function HomePage() {
@@ -14,6 +14,7 @@ export default function HomePage() {
           <div className="circle"></div>
         </div>
       </div>
+<div>
         <div id="home-page">
           <div className="text-home">
             <h3>Hi, I am</h3>
@@ -25,13 +26,16 @@ export default function HomePage() {
               lies in crafting interactive digital experiences that are both visually
               appealing and highly functional.
             </p>
-            <Link className="btn" to="/hireme">Hire Me</Link>
           </div>
 
           <div className="img-home">
             <img className="my-image" src="/src/assets/my.jpg" alt="Vijay Kaushik" />
           </div>
+            <hr style={{width:"25%" ,height:"2px", float:"right",zIndex:"-1"}}/>
         </div>
+        <hr className="about-line" />
+
+</div>
       </section>
     </>
   );

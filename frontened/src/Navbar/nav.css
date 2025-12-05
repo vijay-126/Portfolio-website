@@ -3,14 +3,17 @@
   --main-yellow: #f5f5f0;
   --main-blue: #c2e2fa;
   --main-purple: #b7a3e3;
+  --main-dark-blue:#374bd1;
+
+  
 }
 
 
 nav {
-  height: 85px;
-  background-color: var(--main-purple);
+  height: 75px;
+   background: linear-gradient(135deg,  var(--main-blue),var(--main-purple));
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   
 }
@@ -29,13 +32,16 @@ nav {
     font-size: 35px;
   letter-spacing: 1px;
   word-spacing: 1px;
+background: linear-gradient(to right, var(--main-orange), var(--main-dark-blue), var(--main-purple));
+background-clip: text;
+-webkit-text-fill-color: transparent;
   transition: color 0.3s ease-in-out, transform 0.3s ease, opacity 0.3s ease-in-out;
 }
 
 .nav-logo h2:hover {
   color: var(--main-blue);
   transform: scale(1.05);
-  text-decoration: double underline ;
+  text-decoration:  underline ;
 }
 .nav-bar {
   display: flex;
@@ -61,5 +67,25 @@ nav {
   opacity: 1;
   background-color: var(--main-blue);
   border-radius: 50px;
-transition: all 1.5s;
+transition: all 0.3s;
+}
+
+/* Button */
+.about-btn {
+  background-color: var(--main-orange);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: var(--main-blue);
+  color: black;
+  transform: translateY(-3px);
 }

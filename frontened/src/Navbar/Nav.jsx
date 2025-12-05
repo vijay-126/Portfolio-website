@@ -2,14 +2,14 @@ import "./nav.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 export default function Navbar() {
- let [Text ,setText]= useState("Protfolio");
+ let [Text ,setText]= useState("Vijay");
 
  let chngeText=()=>{
   setText("Vijay Kaushik");
   console.log("change");
  }
  let resetText=()=>{
-  setText("Portfolio");
+  setText("Vijay");
   console.log("change");
  }
 
@@ -25,10 +25,15 @@ export default function Navbar() {
           <div>
             <ul className="nav-bar">
               <li className="nav-link"><Link to="/">Home</Link></li>
-              <li className="nav-link"><Link to="/about"> About</Link></li>
-              <li className="nav-link"><Link to="/service"> Service</Link></li>
+              <li className="nav-link"><Link to="/about"> About Me</Link></li>
+              <li className="nav-link"><Link to="/service"> Craft</Link></li>
               <li className="nav-link"><Link to="/contact">Contact</Link></li>
             </ul>
+          </div>
+          <div>
+            <a href="/Resume.pdf" target="_blank" className="about-btn" >
+          <span >Download CV</span>
+            </a>
           </div>
         </nav>
       </section>
