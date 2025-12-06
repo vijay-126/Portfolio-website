@@ -14,15 +14,16 @@ export default function Contact() {
 
     try {
       const result = await emailjs.sendForm(
-        "service_9cvfqgp",        
-            "template_yu2o6yd"  ,
-        form.current,
-        {
-          publicKey:"TdSJM9P03xSyPGmQP",      
-        }
-      );
+       process.env.REACT_APP_EMAILJS_SERVICE_ID,
+  process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+  form.current,
+  {
+    publicKey: process.env.REACT_APP_EMAILJS_PUBLIC_KEY,
+  }
+); 
             alert("Thanks for reaching out! I’ll get back to you soon 😊");
 
+      // alert("Message sent successfully!");
       form.current.reset();
       console.log(result.text);
 
@@ -80,9 +81,8 @@ export default function Contact() {
 
     </section>
   );
-}
+} 
 
 
          
-    //  e.preventDefault();
-          // }}
+    

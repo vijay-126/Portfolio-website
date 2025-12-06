@@ -11,8 +11,10 @@
 .about-line{
    width: 100%;
    height: 2px;
-  margin: 2rem 0 0.5rem 0;
+  margin: 3rem 0 0.5rem 0;
   background: grey;
+  z-index: 2;
+  position: relative;
 }
 
 
@@ -24,7 +26,7 @@
   background: linear-gradient(-45deg, var(--main-purple), var(--main-blue), var(--main-orange), var(--main-yellow));
   background-size: 400% 400%;
   animation: gradientShift 15s ease infinite;
-  z-index: -1;
+  z-index: 0;
   overflow: hidden;
 }
 

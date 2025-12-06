@@ -3,8 +3,10 @@ import Navbar from "./Navbar/Nav";
 import "./App.css";
 import Services from "./service/service";
 import About from "./about/about";
-import Contact from "./contact/contact";
+import Contact  from "./contact/contact.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 
 function App() {
   return (

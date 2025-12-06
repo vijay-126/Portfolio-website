@@ -7,8 +7,8 @@
 
 #contact {
   width: 100%;
-  min-height: 100vh;
-  background: linear-gradient(165deg, var(--main-purple), var(--main-blue));
+  min-height: 80vh;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +28,9 @@
   background-color: var(--main-yellow);
   border-radius: 20px;
   padding: 3rem;
+  z-index: 1;
+position: relative;
+top: 0.2rem;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -93,11 +96,12 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: var(--main-purple);
+  color: var(--main-orange);
 }
 
 .contact-form button {
   background-color: var(--main-orange);
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 0.8rem 2rem;
   border-radius: 30px;
